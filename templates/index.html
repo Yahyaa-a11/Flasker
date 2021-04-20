@@ -1,0 +1,27 @@
+<h1>heloo</h1>
+
+<p>my name is {{first_name}}</p>
+<p>my name is {{first_name|upper}}</p>
+<p>my name is {{first_name|capitalize}}</p>
+
+<p>{{stuff1}}-original</p>
+<p>{{stuff1|safe}}-safe</p>
+<p>{{stuff1|striptags}}-striptags</p>
+
+<p2>{{stuff2}}-original</p2>
+<p>{{stuff2|title}}-title</p>
+<h3>Fav_pizza:</h3>
+
+{% for topping in fav_pizza %}
+    {% if topping == 41 %}
+        {{topping +100 }}<br/>
+    {% else %}
+         {{ topping}}<br/>
+    
+    {% endif %}
+   
+{% endfor %}
+<br/><br/>
+{{ fav_pizza.0}}
+<br/><br/>
+{{ fav_pizza.2+10}}
